@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50px"
+    android:background="@drawable/input_shape">
+
+    <ImageView
+        android:id="@+id/comments_user_profile_url_imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/comments_user_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/comments_user_profile_url_imageView"
+        app:layout_constraintStart_toEndOf="@+id/comments_user_profile_url_imageView"
+        app:layout_constraintTop_toTopOf="@+id/comments_user_profile_url_imageView" />
+
+    <TextView
+        android:id="@+id/comments_comment_date_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/comments_user_name_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/comments_user_name_textView" />
+
+    <TextView
+        android:id="@+id/comments_comment_text_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comments_user_profile_url_imageView" />
+
+    <TextView
+        android:id="@+id/comments_likes_count_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/thumb_up_icon_imageView"
+        app:layout_constraintEnd_toStartOf="@+id/thumb_up_icon_imageView"
+        app:layout_constraintStart_toEndOf="@+id/thumb_down_icon_imageView"
+        app:layout_constraintTop_toTopOf="@+id/thumb_up_icon_imageView"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <ImageView
+        android:id="@+id/thumb_down_icon_imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comments_comment_text_textView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/baseline_thumb_down_off_alt_24" />
+
+    <ImageView
+        android:id="@+id/thumb_up_icon_imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/thumb_down_icon_imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thumb_down_icon_imageView"
+        app:srcCompat="@drawable/baseline_thumb_up_off_alt_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>
